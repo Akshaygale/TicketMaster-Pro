@@ -11,10 +11,12 @@ module "security" {
 
 
 module "database" {
-  source = "./database"
+  source       = "./database"
+  project_name = var.project-name
 
-  vpc_id = module.networking.vpc_id
-  subnet = module.networking.public_subnet_id
+  subnet1 = module.networking.public_subnets[0]  # first subnet
+  subnet2 = module.networking.public_subnets[1]  # second subnet
+  vpc_id  = module.networking.vpc_id
 }
 
 module "cache" {
