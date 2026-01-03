@@ -2,10 +2,12 @@ variable "vpc_id" {
   
 }
 
-variable "subnet" {
+variable "subnet1" {
   
 }
-
-variable "project-name" {
+variable "subnet2" {
+  
+}
+variable "project_name" {
   default = "ticketmaster-pro"
 }
