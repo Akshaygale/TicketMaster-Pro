@@ -1,10 +1,6 @@
 resource "aws_db_subnet_group" "db_subnet" {
   name       = "${var.project_name}-db-subnet"
-  subnet_ids = [
-    var.subnet1,
-    var.subnet2
-  ]
-
+  subnet_ids = [var.subnet1, var.subnet2]
   tags = {
     Name = "${var.project_name}-db-subnet"
   }

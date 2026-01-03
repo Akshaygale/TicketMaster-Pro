@@ -2,7 +2,7 @@ variable "aws_region" {
   default = "ap-south-1"
 }
 
-variable "project-name" {
+variable "project_name" {
   default = "ticketmaster-pro"
 }
 
