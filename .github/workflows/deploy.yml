@@ -1,0 +1,19 @@
+name: TicketMaster CI/CD
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Backend Image
+        run: docker build -t backend -f docker/backend.Dockerfile .
+
+      - name: Build Frontend Image
+        run: docker build -t frontend -f docker/frontend.Dockerfile .
+
+      - name: Deploy to EC2
+        run: echo "Deploying containers..."
